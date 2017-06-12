@@ -9,8 +9,8 @@
             schema = table.Substring(0, dotPos)
             table = table.Substring(dotPos + 1)
         End If
-        Return Databasic.Statement.Prepare(
-            "SELECT c.name
+		Return Databasic.Statement.Prepare(
+			"SELECT c.name
                 FROM sys.columns AS c 
                 WHERE
                     c.object_id = (
@@ -25,16 +25,16 @@
                             )
                     )
                     ORDER BY c.column_id",
-            connection
-        ).FetchAll(New With {
-            .schema = schema,
-            .table = table
-        }).ToList(Of String)()
-    End Function
+			connection
+		).FetchAll(New With {
+			.schema = schema,
+			.table = table
+		}).ToList(Of String)()
+	End Function
 
     Public Overrides Function GetLastInsertedId(transaction As Databasic.Transaction) As Object
-        Return Databasic.Statement.Prepare("SELECT SCOPE_IDENTITY()", transaction).FetchOne().ToValue(Of Object)()
-    End Function
+		Return Databasic.Statement.Prepare("SELECT SCOPE_IDENTITY()", transaction).FetchOne().ToInstance(Of Object)()
+	End Function
 
     Public Overrides Function GetAll(
         connection As Databasic.Connection,
@@ -66,7 +66,7 @@
                 If limit > 0 Then sql += $" FETCH NEXT {limit} ROWS ONLY"
             End If
         End If
-        Return Statement.Prepare(sql, connection).FetchAll()
-    End Function
+		Return Databasic.Statement.Prepare(sql, connection).FetchAll()
+	End Function
 
 End Class
