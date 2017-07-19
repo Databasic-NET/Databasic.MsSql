@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata minClientVersion="2.6">
 		<id>Databasic.MsSql</id>
-		<version>1.0.0.0</version>
+		<version>1.1.0.0</version>
 		<title>Databasic - Microsoft SQL Package</title>
 		<authors>Tom Flidr</authors>
 		<owners>Tom Flidr</owners>
@@ -12,18 +12,15 @@
 		<language>en-US</language>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-      Databasic - C#/VB.NET database utility
-      - focusing on queries primarily based on pure SQL commands, no linq transations
-      - arranging data into primitive types, typed active record classes, collections and more
-      - allowing to run any nonselect queries
+      C#/VB.NET database utility to write pure Microsoft SQL queries and load data into environment variables and instances.
     </description>
 		<copyright>Copyright ©	2017</copyright>
 		<tags>sql database select selecting query queries commands mssql tool utility</tags>
 		<dependencies>
-      <dependency id="System" version="4.0.0.0" />
+			<!--dependency id="System" version="4.0.0.0" />
       <dependency id="System.Core" version="4.0.0.0" />
-      <dependency id="System.Data" version="4.0.0.0" />
-      <dependency id="Databasic" version="1.0.0.0" />
+      <dependency id="System.Data" version="4.0.0.0" /-->
+      <dependency id="Databasic.Core" version="1.1.0.0" />
 		</dependencies>
 		<releaseNotes>https://github.com/databasic-net/databasic/releases</releaseNotes>
 	</metadata>

@@ -3,7 +3,7 @@
   <connectionStrings>
     <add
       name="Databasic.Example.MsSql"
-      connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=DATABASE_NAME;Persist Security Info=True;User ID=USER_NAME;Password=PASSWORD"
+      connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=DATABASE;User ID=USER_NAME;Password=PASSWORD;Persist Security Info=True;"
       providerName="System.Data.SqlClient"
       xdt:Transform="Remove"
       xdt:Locator="Match(name)" />
