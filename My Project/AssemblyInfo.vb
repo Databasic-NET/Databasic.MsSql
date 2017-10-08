@@ -14,7 +14,7 @@ Imports System.Runtime.InteropServices
  - arranging data into primitive types, typed active record classes, collections and more
  - allowing to run any nonselect queries")>
 <Assembly: AssemblyCompany("Tom Flidr")>
-<Assembly: AssemblyProduct("Databasic.MsSql")> 
+<Assembly: AssemblyProduct("Databasic.MsSql")>
 <Assembly: AssemblyCopyright("Copyright ©  2017")>
 <Assembly: AssemblyTrademark("Tom Flidr")>
 
@@ -25,10 +25,10 @@ Imports System.Runtime.InteropServices
 
 ' Version information for an assembly consists of the following four values:
 '
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
+'   Major Version
+'   Minor Version 
+'   Build Number
+'   Revision
 '
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
