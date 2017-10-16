@@ -65,17 +65,17 @@
 	'	If limit > 0 Then
 	'		If connection.ProviderVersion.Major < 12 Then
 	'			sql = $"SELECT {If(limit > 0, "TOP " + limit, "")} ____src.*
-	'    INTO #result 
-	'    FROM (
+	' INTO #result 
+	' FROM (
 	'  SELECT *, ROW_NUMBER() OVER (ORDER BY {orderByStatement}) AS ____rowNumber
 	'  FROM {table}
-	'    ) AS ____src 
+	' ) AS ____src 
 	'  WHERE ____src.____rowNumber > {offset} 
-	'    ORDER BY {orderByStatement}
-	'    ALTER TABLE #result
-	'    DROP COLUMN ____rowNumber
-	'    SELECT * FROM #result
-	'    DROP TABLE #result"
+	' ORDER BY {orderByStatement}
+	' ALTER TABLE #result
+	' DROP COLUMN ____rowNumber
+	' SELECT * FROM #result
+	' DROP TABLE #result"
 	'		Else
 	'			sql += $" ORDER BY {orderByStatement} OFFSET {offset} ROWS"
 	'			If limit > 0 Then sql += $" FETCH NEXT {limit} ROWS ONLY"
