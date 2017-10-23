@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata minClientVersion="2.6">
 		<id>Databasic.MsSql</id>
-		<version>1.2.4.0</version>
-		<title>Databasic - Microsoft SQL Package</title>
+		<version>1.2.5.0</version>
+		<title>Databasic - Microsoft SQL Server</title>
 		<authors>Tom Flidr</authors>
 		<owners>Tom Flidr</owners>
 		<licenseUrl>https://opensource.org/licenses/BSD-3-Clause</licenseUrl>
@@ -17,11 +17,12 @@
 		<copyright>Copyright © 2017</copyright>
 		<tags>microsoft sql mssql tsql database query command select insert update delete pure sql dml tool utility library</tags>
 		<dependencies>
-			<!--dependency id="System" version="4.0.0.0" />
-		    <dependency id="System.Core" version="4.0.0.0" />
-		    <dependency id="System.Data" version="4.0.0.0" /-->
 			<dependency id="Databasic.Core" version="1.2.4.0" />
 		</dependencies>
+		<frameworkAssemblies>
+			<frameworkAssembly assemblyName="System.Core" />
+			<frameworkAssembly assemblyName="System.Data" />
+		</frameworkAssemblies>
 		<releaseNotes>https://github.com/Databasic-NET/Databasic/releases</releaseNotes>
 	</metadata>
 	<files>
